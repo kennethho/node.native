@@ -289,12 +289,12 @@ namespace native
 
 		private:
 			client_context(native::net::tcp* server)
-				: socket_(nullptr)
-				, parser_()
+				: parser_()
 				, parser_settings_()
 				, was_header_value_(true)
 				, last_header_field_()
 				, last_header_value_()
+				, socket_(nullptr)
 				, request_(nullptr)
 				, response_(nullptr)
 				, callback_lut_(new callbacks(1))
@@ -424,13 +424,13 @@ namespace native
 			}
 
 		private:
-			native::net::tcp* socket_;
 			http_parser parser_;
 			http_parser_settings parser_settings_;
 			bool was_header_value_;
 			std::string last_header_field_;
 			std::string last_header_value_;
 
+			native::net::tcp* socket_;
 			request* request_;
 			response* response_;
 
