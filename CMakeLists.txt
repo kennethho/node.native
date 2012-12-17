@@ -8,14 +8,10 @@ FIND_PACKAGE(Threads)
 
 add_definitions(-std=gnu++0x -g -O0 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64)
 
-link_directories(
-  $ENV{LIBUV_PATH}
-  $ENV{HTTP_PARSER_PATH}/build/nonstrict
-)
 include_directories(
   ${node_native_SOURCE_DIR}
-  $ENV{LIBUV_PATH}/include
-  $ENV{HTTP_PARSER_PATH}
+  ${uv_SOURCE_DIR}/include
+  ${http_parser_root_SOURCE_DIR}
 )
 
 add_executable(
