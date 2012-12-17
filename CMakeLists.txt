@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 2.8)
 
 project(node_native)
 
+ADD_SUBDIRECTORY(subtrees)
+
 FIND_PACKAGE(Threads)
 
 add_definitions(-std=gnu++0x -g -O0 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64)
