@@ -40,7 +40,7 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
     src/unix/tty.c
     src/unix/udp.c)
 
-  add_definitions(-g --std=gnu89 -pedantic -Wall -Wextra -Wno-unused-parameter -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64)
+  add_definitions(-g -pedantic -Wall -Wextra -Wno-unused-parameter -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64)
 endif()
 
 add_library(
