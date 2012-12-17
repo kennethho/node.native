@@ -5,7 +5,6 @@
         'defines': [
           '_LARGEFILE_SOURCE',
           '_FILE_OFFSET_BITS=64',
-          '_GNU_SOURCE',
         ],
         'conditions': [
           ['OS=="solaris"', {
@@ -55,7 +54,6 @@
         [ 'OS=="win"', {
           'defines': [
             '_WIN32_WINNT=0x0600',
-            '_GNU_SOURCE',
           ],
           'sources': [
             'include/uv-private/uv-win.h',
@@ -102,7 +100,6 @@
         }, { # Not Windows i.e. POSIX
           'cflags': [
             '-g',
-            '--std=gnu89',
             '-pedantic',
             '-Wall',
             '-Wextra',
@@ -324,7 +321,6 @@
           ],
           'libraries': [ 'ws2_32.lib' ]
         }, { # POSIX
-          'defines': [ '_GNU_SOURCE' ],
           'sources': [
             'test/runner-unix.c',
             'test/runner-unix.h',
@@ -387,7 +383,6 @@
           ],
           'libraries': [ 'ws2_32.lib' ]
         }, { # POSIX
-          'defines': [ '_GNU_SOURCE' ],
           'sources': [
             'test/runner-unix.c',
             'test/runner-unix.h',

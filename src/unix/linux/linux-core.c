@@ -298,6 +298,7 @@ uint64_t uv_get_total_memory(void) {
   return (uint64_t) sysconf(_SC_PAGESIZE) * sysconf(_SC_PHYS_PAGES);
 }
 
+extern char **environ;
 
 char** uv_setup_args(int argc, char** argv) {
   char **new_argv;
