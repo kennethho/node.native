@@ -1,3 +1,13 @@
+# Notes about this (selfhosting) branch
+To build:
+1. Clone a copy of this branch
+2. Change into node.native root dir
+3. $ mkdir build && cd build
+4. $ cmake .. && make
+5. Have fun
+
+Note that both libuv and http-parser are subtree'd in the <strong>subtrees</strong> dir, so I don't have to worry about setting up the environment for building and running.
+
 # node.native 
 
 <b>node.native</b> is a [C++11](http://en.wikipedia.org/wiki/C%2B%2B11) (aka C++0x) port for [node.js](https://github.com/joyent/node). 
