@@ -77,7 +77,7 @@ namespace native
     /*!
      *  Starts the default loop.
      */
-    int run()
+    inline int run()
     {
         return uv_run(uv_default_loop());
     }
@@ -85,7 +85,7 @@ namespace native
     /*!
      *  Polls for new events without blocking for the default loop.
      */
-    int run_once()
+    inline int run_once()
     {
         return uv_run(uv_default_loop());
     }
