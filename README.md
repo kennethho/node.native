@@ -1,10 +1,12 @@
 # Notes about this (selfhosting) branch
 To build:
-1. Clone a copy of this branch
-2. Change into node.native root dir
-3. $ mkdir build && cd build
-4. $ cmake .. && make
-5. Have fun
+<ol>
+<li>Clone a copy of this branch</li>
+<li>Change into node.native root dir</li>
+<li>$ mkdir build && cd build</li>
+<li>$ cmake .. && make</li>
+<li>Have fun</li>
+</ol>
 
 Note that both libuv and http-parser are subtree'd in the <strong>subtrees</strong> dir, so I don't have to worry about setting up the environment for building and running.
 
