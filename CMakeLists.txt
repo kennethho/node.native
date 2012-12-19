@@ -11,7 +11,7 @@ add_definitions(-std=gnu++0x -g -O0 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64)
 include_directories(
   ${node_native_SOURCE_DIR}
   ${uv_SOURCE_DIR}/include
-  ${http_parser_root_SOURCE_DIR}
+  ${http_parser_SOURCE_DIR}
 )
 
 add_executable(
