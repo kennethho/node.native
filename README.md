@@ -10,6 +10,8 @@ To build:
 
 Note that both libuv and http-parser are subtree'd in the <strong>subtrees</strong> dir, so I don't have to worry about setting up the environment for building and running.
 
+BTW, don't bother trying getting it to work with [gcc-4.7](https://plus.google.com/101557590873105234449/posts/2Q23CZws7cQ).
+
 # node.native 
 
 <b>node.native</b> is a [C++11](http://en.wikipedia.org/wiki/C%2B%2B11) (aka C++0x) port for [node.js](https://github.com/joyent/node). 
