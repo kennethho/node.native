@@ -479,6 +479,14 @@ namespace native
 
 				return true;
 			}
+			void close()
+			{
+			  if(socket_.get())
+			    {
+			      socket_->close([]{});
+			      socket_.reset();
+			    }
+			}
 
 		private:
 			std::shared_ptr<native::net::tcp> socket_;
