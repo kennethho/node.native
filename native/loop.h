@@ -38,13 +38,15 @@ namespace native
         uv_loop_t* get() { return uv_loop_; }
 
         /*!
-         *  Starts the loop.
+         *  Starts the loop. Always returns zero.
          *  Internally, this function just calls uv_run() function.
          */
         bool run() { return uv_run(uv_loop_)==0; }
 
         /*!
-         *  Polls for new events without blocking.
+         *  Polls for new events once. Blocking if there is no event pending.
+         *  Returns true if there is no event pending, or false if there are
+         *  more events to be polled.
          *  Internally, this function just calls uv_run_once() function.
          */
         bool run_once() { return uv_run_once(uv_loop_)==0; }
@@ -75,19 +77,21 @@ namespace native
     };
 
     /*!
-     *  Starts the default loop.
+     *  Starts the default loop. Always returns true.
      */
-    inline int run()
+    inline bool run()
     {
-        return uv_run(uv_default_loop());
+        return uv_run(uv_default_loop()) == 0;
     }
 
     /*!
-     *  Polls for new events without blocking for the default loop.
+     *  Polls for new events once for the default loop. Blocking if there is no event pending.
+     *  Returns true if there is no event pending, or false if there are
+     *  more events to be polled.
      */
-    inline int run_once()
+    inline bool run_once()
     {
-        return uv_run(uv_default_loop());
+        return uv_run(uv_default_loop()) == 0;
     }
 }
 
