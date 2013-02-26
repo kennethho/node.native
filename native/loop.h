@@ -91,7 +91,7 @@ namespace native
      */
     inline bool run_once()
     {
-        return uv_run(uv_default_loop()) == 0;
+        return uv_run_once(uv_default_loop()) == 0;
     }
 }
 
